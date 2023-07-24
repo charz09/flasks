@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container main-content">
+    <br><br>
+    <h1>What is Security?</h1>
+    <p>
+        This is a website that provides information on security, quality, and usability. What is "Security"? It is a means of securing data or protection of data, others like networks, digital assets, different computer systems from unwanted or unauthorized personnel.
+    </p>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img src="{{ url_for('static', filename='img/cardiff.jpg') }}" class="card-img-top" alt="Security Image">
+                <div class="card-body">
+                    <h5 class="card-title">Security</h5>
+                    <p class="card-text">A short summary about the security page...</p>
+                    <a href="{{ url_for('security') }}" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

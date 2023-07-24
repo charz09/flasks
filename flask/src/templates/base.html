@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Website Security, Quality, and Usability</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='custom.css') }}">
+    
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+            <a class="navbar-brand text-dark" href="{{ url_for('index') }}">Web Application(CMT120)</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold text-dark" href="{{ url_for('index') }}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold text-dark" href="{{ url_for('security') }}">Security</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold text-dark" href="{{ url_for('quality') }}">Quality</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold text-dark" href="{{ url_for('usability') }}">Usability</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <span class="nav-link">{{ g.greeting }}</span>
+                    </li>
+                    {% if not logged_in %}
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link font-weight-bold text-danger" href="{{ url_for('login') }}">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link font-weight-bold text-light" href="{{ url_for('registration') }}">Registration</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link font-weight-bold text-light" href="{{ url_for('logout') }}">Logout</a>
+                        </li>
+                    </ul>
+                {% endif %}
+            </div>
+        </nav>
+    </header> 
+    
+    <div class="container mt-5">
+        
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <img src="static/img/hero-image.jpg" alt="Hero Image" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+                <h1 class="display-3">UniNetworks(CardiffUni)</h1>
+                <p class="lead">Understanding Website Security, Quality, and its Usability</p>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-md-4">
+                    <a href="{{ url_for('security') }}">
+                        <img src="static/img/security_image.jpg" alt="Website Security Image" class="img-fluid passport-size" style="width: 240px; height: 200px; object-fit: cover;">
+                    </a>
+                    <h2>Website Security</h2>
+                    <p>"Website Security", what does it mean? It protects websites and its applications from any form of attack from unwanted persons.Unauthorized persons are kept away..</p>
+                    <a href="{{ url_for('security')}}" class="btn btn-primary">Learn More</a>
+                </div>
+                <div class="col-md-4">
+                    <a href="{{ url_for('quality') }}">
+                        <img src="static/img/quality_image.jpg" alt="Website Quality Image" class="img-fluid passport-size" style="width: 240px; height: 200px; object-fit: cover;">
+                    </a>
+                    <h2>Website Quality</h2>
+                    <p>Website quality is so crucial in web development. A very high quality website gives excellent experiences to the users, because it is accessible and well optimized for search engines.</p>
+                    <a href="{{ url_for('quality')}}" class="btn btn-primary">Learn More</a>
+                </div>
+                <div class="col-md-4">
+                    <a href="{{ url_for('usability') }}">
+                        <img src="static/img/usability_image.jpg" alt="Website Usability Image" class="img-fluid passport-size" style="width: 240px; height: 200px; object-fit: cover;">
+                    </a>
+                    <h2>Website Usability</h2>
+                    <p>Usability refers to the ease with which users can navigate and interact with a website, and is a critical component of providing a high-quality user experience.</p>
+                    <a href="{{ url_for('usability')}}" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+
+    <footer class="text-center mt-5">
+        <p>Contact: ikusanCA@cardiff.ac.uk | Phone: +44 (123) 456-7890</p>
+        <p><a href="https://www.cardiff.ac.uk/computer-science">Computer Science & Informatics</a> | <a href="#">c22020237</a></p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Website Usability</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <!-- Navigation bar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="{{ url_for('index') }}">Web Application(CMT120)</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold" href="{{ url_for('index') }}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold" href="{{ url_for('security') }}">Security</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold" href="{{ url_for('quality') }}">Quality</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold" href="{{ url_for('usability') }}">Usability</a>
+                    </li>
+                </ul>
+                {% if not logged_in %}
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold" href="{{ url_for('login') }}">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold" href="{{ url_for('registration') }}">Registration</a>
+                    </li>
+                </ul>
+                {% endif %}
+            </div>
+        </nav>
+    </header>
+
+    <div class="container mt-5">
+        <!-- Usability content section -->
+        <h1 class="display-4">Website Usability</h1>
+        <p class="lead">Creating user-friendly interfaces and intuitive navigation is crucial to ensure a positive user experience. Usable websites are designed with the user in mind, considering their needs and preferences to enhance overall satisfaction.</p>
+        <p>Key aspects that contribute to website usability:</p>
+        <ul>
+            <li>User testing and feedback to identify pain points and improve the interface.</li>
+            <li>User-centered design approach for intuitive and accessible interactions.</li>
+            <li>Inclusive design to ensure all users can access and navigate the website.</li>
+            <li>Clear and concise content presentation for easy consumption.</li>
+            <li>Streamlined user flows and minimal friction in completing tasks.</li>
+        </ul>
+        <p>Usability refers to the ease with which users can navigate and interact with a website, and is a critical component of providing a high-quality user experience. The ease of use and navigation of a website can benefit engagement, retention, and satisfaction, while the difficulty of use can lead to frustration, confusion, and dissatisfaction.</p>
+        <p>There are numerous main factors that contribute to website user-friendliness, including browsing, arrangement and style, substance, and capability. In order to enhance website user-friendliness, it is crucial to contemplate each of these factors and ensure that they are optimized for the desires and inclinations of the intended audience. 
+        <p>Browsing is one of the most crucial factors in website user-friendliness, as it establishes how users are capable of moving around and accessing distinct parts of the website. A well-designed browsing system should be apparent, uniform, and effortless to employ, with distinct labels and instinctive menus that assist users to locate what they are seeking promptly and simply.</p> 
+        <p>Arrangement and style are also pivotal factors in website user-friendliness, as they govern how the website appears and feels to users. A well-designed website should be visually attractive, with a neat and uncluttered arrangement that makes it simple for users to concentrate on the most vital content. The employment of color, typography, and other style components can also aid in creating a unified and captivating user experience.</p> 
+        <p>Substance is another main factor in website user-friendliness, as it establishes the information that users are capable of accessing on the website. A well-designed website should provide apparent and concise substance that is effortless to read and comprehend, with pertinent and current information that is structured in a logical and instinctive manner.</p>
+        <p>Operability is also a vital aspect in website usefulness, as it decides the functions and capacities that users are capable to access on the website. A well-designed website should offer a range of helpful and user-friendly functions and operability, such as search operability, forms, and interactive elements, that assist users in attaining their objectives and finishing their tasks swiftly and effortlessly.</p> 
+        <p>To enhance website usefulness, it is essential to conduct user testing and feedback to identify areas for enhancement. This can involve conducting user surveys, focus groups, and usefulness testing to gather feedback on the website's usefulness and identify areas for enhancement. By constantly iterating and enhancing the website's usefulness, it is feasible to create a high-quality user experience that satisfies the requirements and preferences of the target audience.</p> 
+        <p>In my prior experience as a web developer, I have personally witnessed the significance of website usefulness in building a successful website. By prioritizing usefulness and concentrating on the requirements and preferences of the target audience, it is feasible to create a website that is easy to use, captivating, and effective in attaining its business objectives.</p>
+
+        <h4>Other Important factors to be considered -</h4>
+        <ol>
+            <li>Velocity: Website velocity is a crucial factor in usability, as slow-loading pages can irritate and discourage users. To enhance website velocity, it is significant to optimize images and other media, diminish the number of HTTP requests, and utilize caching and compression techniques. </li>
+            <li>Availability: Website availability is necessary for users with disabilities, and can also enhance usability for all users. To enhance website availability, it is significant to follow the Web Content Accessibility Guidelines (WCAG), which provide guidelines for making web content more accessible to users with disabilities.</li>
+            <li>Mobile-adaptability: With more and more users accessing websites on mobile devices, it is crucial to optimize websites for mobile devices. To enhance mobile-adaptability, it is significant to use responsive design techniques, optimize images and other media for mobile devices, and ensure that content is easily accessible and readable on smaller screens. </li>
+            <li>Uniformity: Uniformity is an important aspect of website usability, as it helps users to understand how the website works and where to find information. To enhance uniformity, it is significant to use consistent navigation, layout, and design elements throughout the website.</li>
+            <li>Mistake prevention and recovery: Website usability can be enhanced by preventing mistakes and offering clear instructions for recovery when mistakes occur. To enhance mistake prevention and recovery, it is crucial to use clear and concise mistake messages, provide suggestions to rectify mistakes, and offer clear instructions for recovering from mistakes.</li>
+            <li>User input: User input is a vital aspect of website usability, as it can help identify areas for enhancement and provide insights into user preferences and requirements. To improve user input, it is crucial to offer user-friendly input methods, such as input forms and surveys, and to promptly and appropriately respond to user input. </li>
+        </ol>
+        <p>By considering these factors and continuously iterating and enhancing the website's usability, it is possible to create a website that is simple to use, engaging, and effective in achieving its business objectives.
+        </p>
+        <p>Other methods to also be considered:</p>
+        <ol>
+            <li>User examination: User examination involves observing users as they interact with the website and collecting feedback on their experience. This can be done in-person or remotely, and typically involves asking users to complete specific tasks while providing feedback on their experience. User examination can provide valuable insights into how users interact with the website and identify areas for improvement. </li>
+            <li>Polls and surveys: Polls and surveys can be used to gather feedback from users on their experience with the website. These can be administered online or in-person, and can provide valuable insights into user preferences and needs.</li>
+            <li>Analysis: Web analysis tools can be used to track user behavior on the website, such as page views, click-through rates, and bounce rates. This data can provide insights into how users are interacting with the website and identify areas for improvement.</li>
+            <li>Professional assessment: Professional assessment involves having an experienced evaluator review the website and provide feedback on its usability. This can be done using a standardized evaluation framework, such as the Nielsen Norman Group's heuristics, which provide a set of guidelines for evaluating website usability.</li>
+            <li>A/B experimentation: A/B experimentation includes experimenting with distinct versions of the website to determine which performs superior in regards to user behavior or business metrics. For instance, two distinct versions of a landing page could be experimented with to observe which version leads to more conversions.</li>
+        </ol>
+        <p>By utilizing one or more of these approaches, it is feasible to gauge the user-friendliness of a website and recognize areas for enhancement. It is crucial to consistently monitor and enhance website user-friendliness over time to guarantee that the website is satisfying the requirements and inclinations of its users.</p>
+        <h3>References</h3>
+        <br>
+        <ul>
+            <li>Nielsen, J. (1993). Functionality Engineering. Academic Press. <i>This book is a timeless reference on functionality engineering and provides a comprehensive overview of the principles and best practices for designing and evaluating functional websites.</i></li>
+            <li>Norman, D. A. (2013). The Design of Everyday Things: Revised and Expanded Edition. Basic Books. <i>This book provides insights into the principles of effective design, including website design, and is a helpful reference for anyone looking to enhance website functionality.</i></li>
+            <li>World Wide Web Consortium. (2018). Web Content Accessibility Guidelines (WCAG) 2.1. <i>This document provides guidelines for making web content more accessible to users with disabilities, and is widely considered a key reference for web accessibility best practices.</i></li>
+            <li>The Nielsen Norman Group. (2021). Heuristics for User Interface Design. <i>This document provides a set of guidelines for evaluating website functionality and is a valuable reference for anyone looking to improve the functionality of their website.</i></li>
+            <li>The WebAIM Project. (2021). Web Accessibility Evaluation Tools. <i>This website offers a range of tools and resources for evaluating the accessibility of websites and is a helpful reference for anyone striving to ensure that their website is accessible to users with disabilities.</i></li>
+            <li>Google. (2021). Search Engine Optimization (SEO) Starter Guide. <i>This guide provides an overview of best practices for optimizing websites for search engines, which can also enhance website functionality.</i></li>
+            <li>International Organization for Standardization. (2011). ISO/IEC 25010:2011 Systems and software engineering -- Systems and software Quality Requirements and Evaluation (SQuaRE) -- System and software quality models. <i>This standard provides a framework for evaluating software quality, including website functionality.</i></li>
+            <li>The Interaction Design Foundation. (2021). Functionality Testing. <i>This website provides a comprehensive overview of functionality testing methods, including user testing, and is a valuable reference for anyone looking to enhance website functionality.</i></li>
+            <li>W3C. (2021). Mobile Web Best Practices. <i>This document provides guidelines for creating mobile-friendly websites, which can improve website functionality for users on mobile devices.</i></li>
+            <li>The Usability.gov website. (2021). User Research & Analysis. <i>This website offers a range of resources and guidance on user research and analysis, and is a helpful reference for anyone looking to enhance website functionality through user-centered design.</i></li>
+        </ul>
+        <a href="{{ url_for('usability') }}" class="btn btn-primary"><i class="fas fa-arrow-up"></i> Click to go up!</a>
+    </div>
+
+    <div class="container mt-5">
+        <h2>Leave a Comment</h2>
+        <form method="post" action="{{ url_for('add_comment', page='usability') }}" class="mb-4">
+            <div class="form-group">
+                <textarea class="form-control" name="comment" rows="4" placeholder="Write your comment here"></textarea>
+            </div>
+            <input type="hidden" name="page" value="usability">  <!-- Add this hidden input field -->
+            <button type="submit" class="btn btn-primary">Submit Comment</button>
+        </form>
+    
+        <!-- Show existing comments, if any -->
+        {% if comments %}
+        <h2>Comments</h2>
+        <ul class="list-group">
+            {% for comment in comments %}
+            <li class="list-group-item">{{ comment.comment }}</li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>No comments yet. Be the first one to leave a comment!</p>
+        {% endif %}
+    </div>
+
+    <footer class="text-center mt-5">
+        <p>Contact: ikusanCA@cardiff.ac.uk | Phone: +44 (123) 456-7890</p>
+        <p><a href="https://www.cardiff.ac.uk/computer-science">Computer Science & Informatics</a> | <a href="#">c22020237</a></p>
+    </footer>
+
+   
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

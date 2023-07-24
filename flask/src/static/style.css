@@ -1,0 +1,141 @@
+/* Reset some default styles to ensure consistency across browsers */
+body, h1, h2, h3, h4, h5, h6, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Style for navigation bar */
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center; /* Center the navigation bar horizontally */
+}
+
+.navbar ul {
+    list-style: none;
+    display: inline-block; /* Display the list items horizontally */
+    padding: 0; /* Remove default padding from the list */
+}
+
+.navbar li {
+    display: inline-block; /* Display the list items horizontally */
+    margin: 0 10px; /* Add spacing between list items (optional) */
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.navbar a:hover {
+    background-color: #555; /* Change background color on hover (optional) */
+}
+
+/* Style for main content area */
+.main-content {
+    padding: 20px;
+}
+
+/* Style for forms */
+form {
+    margin-bottom: 20px;
+}
+
+form div {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #555;
+}
+
+/* Style for flash messages */
+.messages {
+    list-style: none;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.messages li {
+    margin-bottom: 5px;
+}
+
+/* Style for forms */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+form {
+    max-width: 400px;
+    padding: 20px;
+    text-align: center;
+}
+
+form div {
+    margin-bottom: 10px;
+}
+
+
+
+/* Set the background image for the registration and login pages */
+body{
+  background-image: url("../static/img/security.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}

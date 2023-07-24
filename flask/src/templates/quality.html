@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Website Quality</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <!-- Navigation bar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="{{ url_for('index') }}">Web Application(CMT120)</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold" href="{{ url_for('index') }}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold" href="{{ url_for('security') }}">Security</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold" href="{{ url_for('quality') }}">Quality</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold" href="{{ url_for('usability') }}">Usability</a>
+                    </li>
+                </ul>
+                {% if not logged_in %}
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold" href="{{ url_for('login') }}">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold" href="{{ url_for('registration') }}">Registration</a>
+                    </li>
+                </ul>
+                {% endif %}
+            </div>
+        </nav>
+    </header>
+
+    <div class="container mt-5">
+        <!-- Quality content section -->
+        <h1 class="display-4">Website Quality</h1>
+        <p class="lead">Delivering a high-quality web experience is essential to engage users and drive conversions. Quality websites are built with the user in mind and adhere to web standards for optimal performance and user satisfaction.</p>
+        <p>Key factors that contribute to website quality:</p>
+        <ul>
+            <li>Fast website performance and loading times.</li>
+            <li>Responsive design for seamless user experience on various devices.</li>
+            <li>Adherence to web standards and best practices for compatibility.</li>
+            <li>Visually appealing design and user-friendly interface.</li>
+            <li>Easy-to-navigate layout and clear information hierarchy.</li>
+        </ul>
+        <p>Website quality is so crucial in web development. A very high quality website gives excellent experiences to the users, because it is accessible and well optimized for search engines. It is important you have a high quality website as a selling point to attract and retain your users or audience, also improve your search engine rankings, which is a key to achieve your goals.</p>
+        <p>The most important factor for website quality is usability. We will talk fully about website usability on the next page. This refers to the ease of the users to navigate through the website. A website that has these attributes to use and navigate can improve the user experience. Users will be encouraged to visit the site for more resources because of the clear and concise navigation which is visually appealing.</p>
+        <p>Another aspect of website quality is accessibility. This is the ability of the website to be accessed by visual, auditory, and motor impairments. Let's assume that users have disabilities to access the web or use the website. A website that has these functions will be accessible to use for impaired users.</p>
+        <p>Recently, some websites have integrated in optimizing their websites to improve the search engines rankings, which allows users to visit frequently.</p>
+        <p>A website that has rich content or interactive experiences can be more attractive, memorable and engaging to users. Features that include animations, interactive content, videos, audio, etc. Also, the features are serving the primary purpose that will have a negative impact on the users or website performance to distract the main content.</p>
+        <br>
+        <h2>Some examples of websites that have good interactive features are:</h2>
+        <ul>
+            <li>Spotify (<a href="https://www.spotify.com">https://www.spotify.com</a>) - Spotify is known as the music streaming platform that is interactive and allows personalized music. It also has different features like visualization and sharing of music, which makes it more engaging and appealing.</li>
+            <li>Netflix (<a href="https://www.netflix.com">https://www.netflix.com</a>) - It is a video streaming platform that allows interactive and personalization like Spotify. The streaming service provides TV shows and movies based on users' choice of genre and preferences.</li>
+            <li>Amazon (<a href="https://www.amazon.com">https://www.amazon.com</a>) - Amazon platform is a shopping website like an e-commerce website that provides products based on users' preferences and shopping habits.</li>
+            <li>In addition, a good website quality is appreciated if it has mobile friendly features. Most users prefer to use a mobile to access the website. A mobile-friendly website that can be viewed easily and navigated, even on a small screen, like smartphones and tablets.</li>
+            <li>In conclusion, website performance is a key factor in website quality. It means a website that loads quickly and efficiently will improve user experience and encourage users to visit the website frequently. Improve website quality by using caching techniques, optimizing the images and reducing the installation of unnecessary external plugins or scripts.</li>
+        </ul>
+        <h3>Examples of websites that excel in all of these factors to provide a high-quality user experience -</h3>
+        <ol>
+            <li>Google (<a href="https://www.google.com">https://www.google.com</a>)</li>
+            <li>The New York Times (<a href="https://www.nytimes.com">https://www.nytimes.com</a>)</li>
+            <li>Dropbox (<a href="https://www.dropbox.com">https://www.dropbox.com</a>)</li>
+            <li>Cardiff University (<a href="https://www.cardiff.ac.uk/">https://www.cardiff.ac.uk/</a>)</li>
+        </ol>
+        <h2>References</h2>
+        <ul>
+            <li>Nielsen, J. (1993). Usability engineering. Academic Press.
+                This is reference on usability engineering and provides a comprehensive overview of the principles and best practices for designing and evaluating usable websites</li>
+            <li>World Wide Web Consortium. (2018). Web Content Accessibility Guidelines (WCAG) 2.1.
+                It provides guidelines for making web content more accessible to users with disabilities, and is widely regarded as a key reference for web accessibility best practices.</li>
+            <li>Google. (2021). Search Engine Optimization (SEO) Starter Guide.
+                This guide provides an overview of best practices for optimizing websites for search engines, and is a useful reference for anyone looking to improve their website's search engine rankings.</li>
+            <li>The WebAIM Project. (2021). Web Accessibility Evaluation Tools.
+                This website provides a range of tools and resources for evaluating the accessibility of websites, and is a useful reference for anyone looking to ensure that their website is accessible to users with disabilities.</li>
+            <li>International Organization for Standardization. (2011). ISO/IEC 27001:2013 - Information technology -- Security techniques -- Information security management systems -- Requirements.
+                It is a framework for establishing, implementing, maintaining and continually improving an information security management system (ISMS), and is a useful reference for anyone looking to improve their website's security.</li>
+            <li>Nielsen, J. (1999). Designing Web Usability: The Practice of Simplicity. New Riders.
+                It provides practical advice and guidelines for designing usable and effective websites, and is a useful reference for anyone looking to improve their website's usability.</li>
+            <li>Norman, D. A. (2013). The Design of Everyday Things: Revised and Expanded Edition. Basic Books.
+                It is insightful into the principles of good design, and is a useful reference for anyone looking to improve the design of their website.</li>
+            <li>W3C. (2021). Mobile Web Best Practices.
+                This is a guidelines for creating mobile-friendly websites, and is a useful reference for anyone looking to optimize their website for mobile devices.</li>
+            <li>Kissmetrics. (2014). The Power of Personalization in Marketing.
+                It gives the importance of personalization in website design and marketing, and is a useful reference for anyone looking to create a more personalized user experience on their website.
+                </li>
+        </ul>
+        <a href="{{ url_for('quality') }}" class="btn btn-primary"><i class="fas fa-arrow-up"></i>Click to go up!</a>
+    </div>
+
+    <div class="container mt-5">
+        <h2>Leave a Comment</h2>
+        <form method="post" action="{{ url_for('add_comment', page='quality') }}" class="mb-4">
+            <div class="form-group">
+                <textarea class="form-control" name="comment" rows="4" placeholder="Write your comment here"></textarea>
+            </div>
+            <input type="hidden" name="page" value="quality">  <!-- hidden input field -->
+            <button type="submit" class="btn btn-primary">Submit Comment</button>
+        </form>
+    
+        
+        {% if comments %}<!-- Show existing comments, if any -->
+        <h2>Comments</h2>
+        <ul class="list-group">
+            {% for comment in comments %}
+            <li class="list-group-item">{{ comment.comment }}</li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>No comments yet. Be the first one to leave a comment!</p>
+        {% endif %}
+    </div>
+    
+
+    <footer class="text-center mt-5">
+        <p>Contact: ikusanCA@cardiff.ac.uk | Phone: +44 (123) 456-7890</p>
+        <p><a href="https://www.cardiff.ac.uk/computer-science">Computer Science & Informatics</a> | <a href="#">c22020237</a></p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

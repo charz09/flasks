@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Website Security</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="{{ url_for('index') }}">Web Application(CMT120)</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold" href="{{ url_for('index') }}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold" href="{{ url_for('security') }}">Security</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold" href="{{ url_for('quality') }}">Quality</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold" href="{{ url_for('usability') }}">Usability</a>
+                    </li>
+                </ul>
+                {% if not logged_in %}
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold" href="{{ url_for('login') }}">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold" href="{{ url_for('registration') }}">Registration</a>
+                    </li>
+                </ul>
+                {% endif %}
+            </div>
+        </nav>
+    </header>
+
+    <div class="container mt-5">
+        <!-- Security content section -->
+        <h1 class="display-4">Website Security</h1>
+        <p class="lead">What is "Security"? It is a means of securing data or protection of data, others like networks, digital assets, different computer systems from unwanted or unauthorized personnel. It controls the theft, damage or disruption that can come from unauthorized users. Security can be in the form of implementation of security controls like authentications, firewalls, encryption, and security policies to neutralize the risks and enforce the credential, availability of the resources or information.</p>
+            
+            
+        <p class="lead">What is a website? In the other hand, we can briefly describe a website as an embodiment of web pages as well as the content which is formally or informally hosted on what we call a web server. The web server can be accessible using the internet as an eyeball user. The formation of a website comes from HTML, Javascript, CSS. The website can also include some multimedia content such as images, videos and audio files. The eyeball users access the website through what we call a website's URL (Uniform Resource Locator) by entering the page aggress into the URL.</p>
+            
+            
+            
+        <p>Adding the two words together "Website Security", what does it mean? It protects websites and its applications from any form of attack from unwanted persons. Unauthorized persons are kept away from having access to the data or causing security damage or threats. It is mandatory to secure websites and its applications from attackers, who look out for vulnerabilities for their own gain and benefits. It also means breaching security can lead to loss of data, money, and also damage to self and business reputation.</p>
+        <p>Key security measures that contribute to a safe website:</p>
+        <ul>
+            <li>Usage of HTTPS. It means "Hypertext Transfer Protocol Secure". The protocol ensures data encryption that is sent between the server and the browser of the users (e.g. Mozilla Firefox, Chrome, Safari, etc.). The protocol also prevents attackers from stealing data during the communication process. For effective usage of HTTPS, there must be an SSL/TLS certificate issued and configured on your web server.</li>
+            <li>Updated software. Keeping the software updated used by the website or the application can assist in patching security vulnerabilities. Constant updating of the software prevents attackers from exploiting them. The updates are performed automatically on web server software, CMS software (Content Management Systems), plugins and other components</li>
+            <li>Firewall for web applications. The name of the application is called WAF (Web Application Firewall), which is very important tools these days for a number of enterprises that serve their clients or customers over the internet such as  including online banking, e-commerce, social media platforms, and mobile application developers. The tool is so powerful that it filters out incoming web traffic that will prevent an attack like SQL injection or cross-site scripting. In summary, it prevents attacks before it gets to the web application.</li>
+            <li>Implement anti-malware software. The software prevents the web application from malware like worms, Trojans, and worms. It helps to control the web server from attackers stealing data. Malware typically comes in the form of malicious code hidden in computer systems and is often installed without the knowledge or consent of the computer's owner. Malware spreads by email, operating systems (OSes), removable media or the internet. Antimalware software uses three strategies to protect systems from malicious software: signature-based detection, behavior-based detection and sandboxing.</li>
+            <li>Access control implementation. This is a data security process that enables us to manage who is authorized to access certain data and resources. Secure access control uses policies that verify users are who they claim to be and ensures appropriate control access levels are granted to users. There are different components to consider for effectiveness of the access control like "Authentication", "Authorization", "Access", "Manage" and "Auditing".</li>
+        </ul>
+        <p>These techniques require frequent applications and there is a necessity to regularly assess the website or website for a common or uncommon security vulnerability and thereby implement appropriate secure measures to counter the attacks.</p>
+
+        <p>There are resources online to enhance your website security and stay informed about the latest security threats. There are few ones below:</p>
+        <ul>
+            <li>SANS Institute - They are known as the leading organization for cybersecurity training and certification. They give support to researchers and offer free resources, including a newsletter. <a href="https://www.sans.org/">[1]</a>.</li>
+            <li>NIST (National Institute of Standards and Technology) - These agencies are non-regulatory agencies from the United States Department of Commerce. They provide guidelines and standards for improving cybersecurity. They also give updates and information about the latest threats and vulnerabilities.  <a href="https://www.nist.gov/cyberframework">[2]</a></li>
+            <li>CIS (Center for Internet Security) - It is an organization that is not for a profit. It provides resources for cybersecurity which include best practices, benchmarks, and tools to help people and organizations secure their websites. They also offer resources like NIST. <a href="https://www.cisecurity.org/">[3]</a></li>
+            <li>Open Web Application Security Project (OWASP) - It also provides resources for people and organizations on web application security. <a href="https://owasp.org/">[4]</a></li>
+            <li>Some websites on security news that cover all the security trends that are latest. Examples are Dark Reading, Bleeping Computer, Threatpost, and KrebsOnSecurity. <a href="https://www.darkreading.com/">[5]</a></li>
+            <li>Some conferences that are related securities can also be helpful to stay informed about the latest security trends and threats. Some useful conferences include DEF CON, Black Hat, and RSA.<a href="https://threatpost.com/">[6]</a></li>
+        </ul>
+
+        <h3>References:</h3>
+        <br>
+        <ol>
+            <li><a href="https://www.sans.org/">SANS Institute</a>. (n.d.). Retrieved from [https://www.sans.org/](https://www.sans.org/)</li>
+            <li><a href="https://www.nist.gov/cyberframework">National Institute of Standards and Technology (NIST)</a>. (n.d.). Cybersecurity Framework. Retrieved from [https://www.nist.gov/cyberframework](https://www.nist.gov/cyberframework)</li>
+            <li><a href="https://www.cisecurity.org/">Center for Internet Security (CIS)</a>. (n.d.). Retrieved from [https://www.cisecurity.org/](https://www.cisecurity.org/)</li>
+            <li><a href="https://owasp.org/">OWASP (Open Web Application Security Project)</a>. (n.d.). Retrieved from [https://owasp.org/](https://owasp.org/)</li>
+            <li><a href="https://www.darkreading.com/">Dark Reading </a>. (n.d.).Retrieved from [https://www.darkreading.com/](https://www.darkreading.com/)</li>
+            <li><a href="https://threatpost.com/">Threatpost</a>. (n.d.). Retrieved from [https://threatpost.com/](https://threatpost.com/)</li>
+            <li><a href="https://krebsonsecurity.com/">KrebsOnSecurity </a>. (n.d.).Retrieved from [https://krebsonsecurity.com/](https://krebsonsecurity.com/)</li>
+            <li><a href="https://www.blackhat.com/">Black Hat</a>. (n.d.). Retrieved from [https://www.blackhat.com/](https://www.blackhat.com/)</li>
+            <li><a href="https://www.defcon.org/">DEF CON </a>. (n.d.). Retrieved from [https://www.defcon.org/](https://www.defcon.org/)</li>
+            <li><a href="https://www.rsaconference.com/">RSA Conference </a>. (n.d.).Retrieved from [https://www.rsaconference.com/](https://www.rsaconference.com/)</li>
+            <li><a href="https://www.microsoft.com/security">Microsoft Security </a>. (n.d.). Retrieved from [https://www.microsoft.com/security](https://www.microsoft.com/security)</li>
+            <li><a href="https://security.googleblog.com/">Google Security Blog </a>. (n.d.). Retrieved from [https://security.googleblog.com/](https://security.googleblog.com/)</li>
+            <li><a href="https://blog.mozilla.org/security/">Mozilla Security Blog </a>. (n.d.). Retrieved from [https://blog.mozilla.org/security/](https://blog.mozilla.org/security/)</li>
+            <li><a href="https://www.theregister.com/security/">The Register</a>. (n.d.). Retrieved from [https://www.theregister.com/security/](https://www.theregister.com/security/)</li>
+        </ol>
+        <a href="{{ url_for('security') }}" class="btn btn-primary"><i class="fas fa-arrow-up"></i> Click to go up!</a>
+    </div>
+
+    <div class="container mt-5">
+        <h2>Leave a Comment</h2>
+        <form method="post" action="{{ url_for('add_comment', page='security') }}" class="mb-4">
+            <div class="form-group">
+                <textarea class="form-control" name="comment" rows="4" placeholder="Write your comment here"></textarea>
+            </div>
+            <input type="hidden" name="page" value="security">  <!-- Add this hidden input field -->
+            <button type="submit" class="btn btn-primary">Submit Comment</button>
+        </form>
+    
+        <!-- Show existing comments, if any -->
+        {% if comments %}
+        <h2>Comments</h2>
+        <ul class="list-group">
+            {% for comment in comments %}
+            <li class="list-group-item">{{ comment.comment }}</li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>No comments yet. Be the first one to leave a comment!</p>
+        {% endif %}
+    </div>   
+    
+
+    <footer class="text-center mt-5">
+        <p>Contact: ikusanCA@cardiff.ac.uk | Phone: +44 (123) 456-7890</p>
+        <p><a href="https://www.cardiff.ac.uk/computer-science">Computer Science & Informatics</a> | <a href="#">c22020237</a></p>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
